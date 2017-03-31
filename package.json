@@ -1,7 +1,7 @@
 {
-  "name": " ",
+  "name": "carbon-ui-docs-ts",
   "version": "0.1.0",
-  "description": "",
+  "description": "Test Typescript definitions to Carbon-ui",
   "private": true,
   "author": "Dalci de Jesus Bagolin",
   "scripts": {
@@ -13,44 +13,44 @@
     "eject": "react-scripts eject",
     "start-cra": "react-scripts start",
     "start-ts": "tsc -w",
-    "init-npm": "npm link react react-dom react-scripts mobx mobx-react js-plus tslib ts-jest jest",
-    "init-types": "npm link @types/react @types/react-dom @types/jest @types/node",
-    "install-eslint": "npm install -g eslint-config-react-app eslint babel-eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-flowtype eslint-plugin-import",
+    "init-npm": "npm link react react-dom react-scripts tslib carbon-ui react-native-web",
+    "init-types": "npm link @types/react @types/react-native @types/jest @types/node",
     "init": "run-s init-*"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "devDependencies": {
+    "typescript": "",
+    "tslint": "",
     "react-scripts": "",
     "tslib": "",
     "@types/react": "",
-    "@types/react-dom": "",
+    "@types/react-native": "",
     "@types/jest": "",
-    "@types/node": "",
-    "ts-jest": "",
-    "eslint-config-react-app": "",
-    "jest": ""
+    "@types/node": ""
   },
   "dependencies": {
+    "@types/react-redux": "^4.4.38",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
     "react": "",
-    "react-dom": "",
-    "mobx": "",
-    "mobx-react": "",
-    "js-plus": ""
+    "react-native-ps": "0.0.7",
+    "react-native-web": "",
+    "react-redux": "^5.0.3",
+    "react-stack-nav": "^0.1.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "simple-markdown": "^0.2.1",
+    "unindent": "^2.0.0",
+    "uranium": "github:tuckerconnelly/uranium"
   },
   "keywords": [],
   "license": "MIT",
-  "main": "index.js",
-  "jest": {
-    "transform": {".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"},
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js" ],
-    "globals": {
-      "__TS_CONFIG__": {
-        "module": "commonjs",
-        "jsx": "react"
-      }
-    }
-  }
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalcib/carbon-ui-docs-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dalcib/carbon-ui-docs-ts/issues"
+  },
+  "homepage": "https://github.com/dalcib/carbon-ui-docs-ts#readme"
 }

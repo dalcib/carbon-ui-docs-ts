@@ -1,0 +1,1385 @@
+{
+  "../carbon-ui/src/components/AppBar.js": {
+    "description": "The app bar is a special kind of toolbar that’s used for branding,\nnavigation, search, and actions.\n\n    import React from 'react'\n    import { View } from 'react-native'\n    import { AppBar } from 'carbon-ui'\n\n    export default () =>\n      <View>\n        <AppBar title=\"The app\" />\n      </View>",
+    "methods": [],
+    "props": {
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The title on the AppBar"
+      },
+      "navIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The material icon name of the nav icon",
+        "defaultValue": {
+          "value": "'menu'",
+          "computed": false
+        }
+      },
+      "onNavIconPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback for handling presses on the nav icon"
+      },
+      "elevated": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will make the AppBar flat and without shadows if false.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "children are inserted after the title"
+      },
+      "css": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/BottomNavigation.js": {
+    "description": "Bottom navigation bars make it easy to explore and switch between top-level\nviews in a single tap.\n\n### Examples\n\n     import React, { Component } from 'react'\n     import { View } from 'react-native'\n     import { BottomNavigation, BottomNavigationIcon, Headline } from 'carbon-ui'\n\n     export default class BottomNavExample extends Component {\n       state = { activeTab: 'Favorites' }\n\n       _navigate = activeTab => this.setState({ activeTab })\n\n       render() {\n         const { activeTab } = this.state\n         return (\n           <View style={{ height: 220, overflow: 'hidden' }}>\n             <View style={{ padding: 24, alignItems: 'center' }}>\n               <Headline>{activeTab}</Headline>\n             </View>\n             <BottomNavigation>\n               <BottomNavigationIcon\n                 name=\"history\"\n                 text=\"Recents\"\n                 active={activeTab === 'Recents'}\n                 onPress={() => this._navigate('Recents')} />\n               <BottomNavigationIcon\n                 name=\"favorite\"\n                 text=\"Favorites\"\n                 active={activeTab === 'Favorites'}\n                 onPress={() => this._navigate('Favorites')} />\n               <BottomNavigationIcon\n                 name=\"location_on\"\n                 text=\"Nearby\"\n                 active={activeTab === 'Nearby'}\n                 onPress={() => this._navigate('Nearby')} />\n             </BottomNavigation>\n           </View>\n         )\n       }\n     }",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "A collection of BottomNavigationIcons."
+      }
+    }
+  },
+  "../carbon-ui/src/components/BottomNavigationIcon.js": {
+    "description": "An icon in BottomNavigation",
+    "methods": [],
+    "props": {
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The name of the icon, from material icons."
+      },
+      "text": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The text underneath the icon."
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will activate the icon if set to true."
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/DataTable/Cell.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/DataTable/HeaderCell.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/DataTable/HeaderRow.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "A collection of HeaderCells"
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/DataTable/Row.js": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "A collection of Cells"
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/DataTable/index.js": {
+    "description": "Data tables display sets of raw data. They usually appear in desktop\nenterprise products.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { DataTable, gu } from 'carbon-ui'\n\n     export default () =>\n       <View>\n         <DataTable>\n           <DataTable.HeaderRow>\n             <DataTable.HeaderCell>Name</DataTable.HeaderCell>\n             <DataTable.HeaderCell>Calories</DataTable.HeaderCell>\n             <DataTable.HeaderCell>Goodness</DataTable.HeaderCell>\n           </DataTable.HeaderRow>\n           <DataTable.Row>\n             <DataTable.Cell>Cappuccino</DataTable.Cell>\n             <DataTable.Cell>150</DataTable.Cell>\n             <DataTable.Cell>Solid</DataTable.Cell>\n           </DataTable.Row>\n           <DataTable.Row>\n             <DataTable.Cell>Latte</DataTable.Cell>\n             <DataTable.Cell>300</DataTable.Cell>\n             <DataTable.Cell>It's aight</DataTable.Cell>\n           </DataTable.Row>\n           <DataTable.Row>\n             <DataTable.Cell>Mocha</DataTable.Cell>\n             <DataTable.Cell>400</DataTable.Cell>\n             <DataTable.Cell>😍</DataTable.Cell>\n           </DataTable.Row>\n         </DataTable>\n       </View>",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The first child should be a HeaderRow, and the rest regular Rows."
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/Dialog.js": {
+    "description": "Dialogs inform users about a specific task and may contain critical\ninformation, require decisions, or involve multiple tasks.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { Dialog, FlatButton, Body1 } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ height: 300 }}>\n         <Dialog\n           title=\"Title\"\n           actions={[\n             <FlatButton>No</FlatButton>,\n             <FlatButton>Yes</FlatButton>\n           ]}\n           active>\n           <Body1>Body of the dialog here</Body1>\n          </Dialog>\n       </View>",
+    "methods": [],
+    "props": {
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The title of the dialog."
+      },
+      "actions": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The actions, can be an array (say, of FlatButtons) or a full element itself."
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether or not the Dialog is active.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onOverlayPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "When the overlay is pressed (usually to deactivate the dialog)"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The contents of the dialog"
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/Divider.js": {
+    "description": "A divider is a thin, lightweight rule that groups content in lists and page\nlayouts.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { Body1, Divider, gu } from 'carbon-ui'\n\n     export default () =>\n       <View>\n         <Body1>Above the divider</Body1>\n         <Divider style={{ marginVertical: 2 * gu }} />\n         <Body1>Below the divider</Body1>\n       </View>",
+    "methods": [],
+    "props": {
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The color of the divider. It's derived from the theme by default."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/ExpansionPanel.js": {
+    "description": "Expansion panels contain creation flows and allow lightweight editing of an element.",
+    "methods": [],
+    "props": {
+      "expanded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will expand the panel if true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onExpand": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "The handler for when the the user presses to expand",
+        "defaultValue": {
+          "value": "() => 0",
+          "computed": false
+        }
+      },
+      "label": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The label for the collapsed state"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The body of the expanded panel"
+      },
+      "actions": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The buttons on the bottom of the expanded panel"
+      },
+      "approximateHeight": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "This component animates its height using maxHeight so it can accept any\ncontent for it's children property and still animate its height. Pass\nan approximate height when expanded here for a more accurate animation.",
+        "defaultValue": {
+          "value": "50 * gu",
+          "computed": false
+        }
+      }
+    }
+  },
+  "../carbon-ui/src/components/Icon.js": {
+    "description": "A system icon, or UI icon, symbolizes a command, file, device, or directory.\nSystem icons are also used to represent common actions like trash, print,\nand save.\n\nThe Icon's name maps to the material icons font.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { Icon } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>\n         <Icon name=\"thumb_up\" />\n         <Icon name=\"label\" />\n         <Icon name=\"toc\" />\n       </View>",
+    "methods": [],
+    "props": {
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The name of the icon, from the material icons font."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/List.js": {
+    "description": "Lists are best suited to presenting a homogeneous data type or sets of data\ntypes, such as images and text.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { List, ListItem, Elevation } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ ...Elevation.dp2 }}>\n         <List>\n           <ListItem primaryText=\"One\" />\n           <ListItem primaryText=\"Two\" />\n           <ListItem primaryText=\"Three\" />\n         </List>\n       </View>\n\n---\n\n     import React, { Component } from 'react'\n     import { View } from 'react-native'\n     import { List, ListItem, Elevation, gu } from 'carbon-ui'\n\n     export default class Example extends Component {\n       state = { expandedItems: [] }\n\n       _toggleExpandedItem = name => {\n         const expandedItems = [...this.state.expandedItems]\n\n         const index = expandedItems.indexOf(name)\n         if (index === -1) return this.setState({ expandedItems: expandedItems.concat([name]) })\n\n         expandedItems.splice(index, 1)\n         this.setState({ expandedItems })\n       }\n\n       render() {\n         return (\n           <View style={{ ...Elevation.dp2 }}>\n             <List>\n               <ListItem\n                 primaryText=\"Nested item\"\n                 expanded={this.state.expandedItems.indexOf('nestedItem') !== -1}\n                 onPress={() => this._toggleExpandedItem('nestedItem')}>\n                 <ListItem primaryText=\"Nested one\" style={styles.nestedItem} />\n                 <ListItem primaryText=\"Nested two\" style={styles.nestedItem} />\n               </ListItem>\n               <ListItem primaryText=\"Item two\" />\n               <ListItem primaryText=\"Item three\" />\n             </List>\n           </View>\n         )\n       }\n     }\n\n     const styles = {\n       nestedItem: { paddingLeft: 18 * gu },\n     }",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Usually a collection of `ListItem`s"
+      }
+    }
+  },
+  "../carbon-ui/src/components/ListItem.js": {
+    "description": "Individual items for the <List /> component.\n\nCan become a nested menu item it has ListItem for children. Currently you\nneed to set the padding manually for these for performance reasons, but\nmay be automatic in the future.\n\nExamples in the List page.",
+    "methods": [],
+    "props": {
+      "primaryText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The primary text for the item"
+      },
+      "secondaryText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The secondary text for the item. Gets cut off at 2 lines."
+      },
+      "secondaryTextLines": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "1",
+              "computed": false
+            },
+            {
+              "value": "2",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The number of lines before the ellipsis will show in the secondary text.",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "leftIcon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Will put an <Icon /> with the passed value on the left of the ListItem"
+      },
+      "rightIcon": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "element"
+            }
+          ]
+        },
+        "required": false,
+        "description": "If a string, will put an <Icon /> with the passed value on the right of\nthe list item. If it's an element, it'll place the element on the right of\nthe list item."
+      },
+      "rightText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The caption text on the top right of the ListItem"
+      },
+      "active": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "`true` if the list item is currently selected"
+      },
+      "expanded": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Controls the expanded/collapses state if there are ListItem children"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Pass additional ListItems as children to make this ListItem nested\nand expandable."
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "onPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/NavigationDrawer.js": {
+    "description": "The navigation drawer slides in from the left and contains the navigation\ndestinations for your app.\n\n\n### Examples\n\n\n     import React, { Component } from 'react'\n     import { View } from 'react-native'\n     import { NavigationDrawer, List, ListItem, RaisedButton } from 'carbon-ui'\n\n     export default class Example extends Component {\n       state = { open: false }\n\n       _toggleOpen = () => this.setState({ open: !this.state.open })\n\n       render() {\n         return (\n           <View style={{ height: 200 }}>\n             <NavigationDrawer\n               open={this.state.open}\n               onOverlayPress={this._toggleOpen}>\n               <List>\n                 <ListItem\n                   primaryText=\"Link one\"\n                   onPress={this._toggleOpen} />\n                 <ListItem\n                   primaryText=\"Link two\"\n                   onPress={this._toggleOpen} />\n               </List>\n             </NavigationDrawer>\n             <View style={{ justifyContent: 'flex-start', flexDirection: 'row' }}>\n               <RaisedButton\n                 onPress={this._toggleOpen}>\n                 Toggle\n               </RaisedButton>\n             </View>\n           </View>\n         )\n       }\n     }",
+    "methods": [],
+    "props": {
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will open the drawer if set to true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "menuStyle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style of the menu."
+      },
+      "onOverlayPress": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback for when the overlay is pressed"
+      },
+      "onFinishOpening": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback for when the drawer is finished opening. Use this to load in the\nthe content afterwards if open/close animation performance is poor.",
+        "defaultValue": {
+          "value": "() => 0",
+          "computed": false
+        }
+      },
+      "onStartClosing": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback for when the drawer is starting to close. Use this in conjunction\nwith onFinishOpening for performance optimization. If it returns a promise,\nit'll wait for the promise to resolve before starting the closing animation.",
+        "defaultValue": {
+          "value": "() => 0",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/Paper.js": {
+    "description": "Generic Paper component. The <div /> of Material Design.\n\n### Examples\n\n    import React from 'react'\n    import { Paper, Body1, gu } from 'carbon-ui'\n\n    export default () =>\n      <Paper elevation={8} style={{ padding: 4 * gu }}>\n        <Body1>Hey I'm just some paper</Body1>\n      </Paper>",
+    "methods": [],
+    "props": {
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The elevation of the paper",
+        "defaultValue": {
+          "value": "2",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/Snackbar.js": {
+    "description": "Snackbars provide brief feedback about an operation through a message at the\nbottom of the screen.",
+    "methods": [],
+    "props": {
+      "shown": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will show the Snackbar when set to true"
+      },
+      "children": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The text of the snackbar."
+      },
+      "actionText": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The text of the action button."
+      },
+      "onPressAction": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "The onPress prop of the action button."
+      },
+      "autoHideDuration": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The duration in milliseconds after appearing that props.onRequestDeactivate\nwill be called.",
+        "defaultValue": {
+          "value": "3000",
+          "computed": false
+        }
+      },
+      "onRequestHide": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Called once the props.autoHideDuration passes"
+      }
+    }
+  },
+  "../carbon-ui/src/components/TextField.js": {
+    "description": "Text fields allow users to input text, select text, and lookup data via\nauto-completion.\n\nThis component wraps React Native's TextInput, so it accepts all the same\nprops.\n\n### Examples\n\n     import React, { Component } from 'react'\n     import { View } from 'react-native'\n     import { TextField } from 'carbon-ui'\n\n     export default class Example extends Component {\n       state = {\n         form: {\n           textFieldOne: '',\n           textFieldTwo: 'Edit this one to see an error',\n         },\n         errors: {}\n       }\n\n       _setFormValue = (field, val) => {\n         // Set an example error\n         if (field === 'textFieldTwo') {\n           this.setState({\n             errors: { textFieldTwo: 'Something went wrong'}\n           })\n         }\n\n         this.setState({ form: { ...this.state.form, [field]: val }})\n       }\n\n       render() {\n         return (\n           <View>\n             <TextField\n               placeholder=\"Text field one\"\n               value={this.state.form.textFieldOne}\n               onChangeText={val => this._setFormValue('textFieldOne', val)} />\n             <TextField\n               placeholder=\"Text field two\"\n               singleLine\n               value={this.state.form.textFieldTwo}\n               error={this.state.errors.textFieldTwo}\n               onChangeText={val => this._setFormValue('textFieldTwo', val)} />\n             <TextField\n               placeholder=\"Disabled\"\n               singleLine\n               disabled />\n           </View>\n         )\n       }\n     }",
+    "methods": [
+      {
+        "name": "styles",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "value": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The value of the TextField."
+      },
+      "placeholder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The placeholder, for when the value is blank."
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will disabled the TextField if set to true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "error": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The error to display under the TextField"
+      },
+      "singleLine": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will make the TextField a single-line TextField, without a label.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "textInputStyle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style passed to the React Native TextInput"
+      },
+      "placeholderStyle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style passed to the placeholder."
+      },
+      "onChangeText": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Passed through to the underlying TextInput."
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style of the containing View."
+      }
+    }
+  },
+  "../carbon-ui/src/components/TextFieldError.js": {
+    "description": "Error component for the TextField. Normally you wouldn't use this, but you\nyou could use it for a generic form error or something.",
+    "methods": [
+      {
+        "name": "_show",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "text",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "_hide",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "_changeTo",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "text",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "styles",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The error text. The height expands to show it."
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/TouchableRipple.js": {
+    "description": "Ink ripples confirm user input by immediately expanding outward from the\npoint of touch. The card lifts to indicate an active state.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { Paper, TouchableRipple, Body1, Colors, gu } from 'carbon-ui'\n\n     export default () =>\n       <View>\n         <TouchableRipple>\n           <View style={{ padding: 4 * gu }}>\n             <Body1>Simple TouchableRipple</Body1>\n           </View>\n         </TouchableRipple>\n         <TouchableRipple rippleColor={Colors.pinkA200}>\n           <View style={{ padding: 4 * gu }}>\n             <Body1>Colorful ripple</Body1>\n           </View>\n         </TouchableRipple>\n       </View>",
+    "methods": [
+      {
+        "name": "getLayout",
+        "docblock": null,
+        "modifiers": [
+          "async"
+        ],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "_handleLayout",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "measure",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "cb",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "touchableHandleActivePressIn",
+        "docblock": "`Touchable.Mixin` self callbacks. The mixin will invoke these if they are\ndefined on your component.",
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e"
+          }
+        ],
+        "returns": null,
+        "description": "`Touchable.Mixin` self callbacks. The mixin will invoke these if they are\ndefined on your component."
+      },
+      {
+        "name": "touchableHandleActivePressOut",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "touchableHandlePress",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "touchableHandleLongPress",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "touchableGetPressRectOffset",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "touchableGetHitSlop",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "touchableGetHighlightDelayMS",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "touchableGetLongPressDelayMS",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "touchableGetPressOutDelayMS",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "_onKeyEnter",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          },
+          {
+            "name": "callback",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "_onKeyDown",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "_onKeyUp",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "_onKeyPress",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "start",
+        "docblock": null,
+        "modifiers": [
+          "async"
+        ],
+        "params": [
+          {
+            "name": "e",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "end",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "rippleColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The color of the ripple.",
+        "defaultValue": {
+          "value": "'black'",
+          "computed": false
+        }
+      },
+      "rippleSpread": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "How large the ripple gets. It's multipled by the diagonal length of the\nTouchableRipple.",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "rippleOpacity": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The opacity of the ripple",
+        "defaultValue": {
+          "value": "0.2",
+          "computed": false
+        }
+      },
+      "rippleDuration": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The duration of the ripple _and_ the ripple fade out, in ms. So multiply\nit by 2 to get the full duration.",
+        "defaultValue": {
+          "value": "300",
+          "computed": false
+        }
+      },
+      "rippleCentered": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will center the ripple if set to true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The contents of the ripple. Unlike other Touchables, doesn't need to be\na single element."
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      }
+    },
+    "composes": [
+      "react-native"
+    ]
+  },
+  "../carbon-ui/src/components/buttons/FlatButton.js": {
+    "description": "Flat buttons are printed on material. They do not lift, but fill with color\non press.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { FlatButton } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ justifyContent: 'flex-start', flexDirection: 'row' }}>\n         <FlatButton>Hey I'm a button</FlatButton>\n         <FlatButton disabled>Hey I'm disabled</FlatButton>\n       </View>",
+    "methods": [],
+    "props": {
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disables the button if set to true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The inside of the button. If it's text, it'll be UPPERCASEd."
+      },
+      "css": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": ""
+      },
+      "textStyle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style of the button text. Only applies if props.children isn't passed."
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/buttons/FloatingActionButton.js": {
+    "description": "A floating action button represents the primary action in an application.\n\nThe Android implementation is temporarily un-rippled until the React Native\nteam implements `overflow: hidden` on Android.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { FloatingActionButton, Icon, gu } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ justifyContent: 'flex-start', flexDirection: 'row' }}>\n         <FloatingActionButton style={{ marginRight: 2 * gu }}>\n           <Icon name=\"add\" style={{ color: 'white' }} />\n         </FloatingActionButton>\n         <FloatingActionButton accent>\n           <Icon name=\"keyboard_voice\" style={{ color: 'white' }} />\n         </FloatingActionButton>\n       </View>",
+    "methods": [],
+    "props": {
+      "accent": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Will set the background color to the accent color if set to true"
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Usually an <Icon />"
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "onPressIn": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      },
+      "onPressOut": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": ""
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  },
+  "../carbon-ui/src/components/buttons/IconToggle.js": {
+    "description": "Icons are appropriate for toggle buttons that allow a single choice to be\nselected or deselected, such as adding or removing a star to an item.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { IconToggle } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ justifyContent: 'flex-start', flexDirection: 'row' }}>\n         <IconToggle name=\"add\" />\n         <IconToggle name=\"favorite\" />\n         <IconToggle name=\"account_circle\" />\n       </View>",
+    "methods": [],
+    "props": {
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The name of the icon, from material icons: https://material.io/icons/"
+      },
+      "style": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style of the containing TouchableRipple (which is a View)"
+      },
+      "iconStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The style of the Icon element"
+      }
+    }
+  },
+  "../carbon-ui/src/components/buttons/RaisedButton.js": {
+    "description": "Raised buttons behave like a piece of material resting on another sheet –\nthey lift and fill with color on press.\n\n### Examples\n\n     import React from 'react'\n     import { View } from 'react-native'\n     import { RaisedButton } from 'carbon-ui'\n\n     export default () =>\n       <View style={{ justifyContent: 'flex-start', flexDirection: 'row' }}>\n         <RaisedButton>Click me!</RaisedButton>\n         <RaisedButton disabled>Out of commission</RaisedButton>\n       </View>",
+    "methods": [],
+    "props": {
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disables the button if set to true."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The inside of the button. If it's text, it'll be UPPERCASEd."
+      },
+      "textStyle": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "object"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The style of the button text. Only applies if props.children isn't passed."
+      },
+      "theme": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": ""
+      }
+    }
+  }
+}

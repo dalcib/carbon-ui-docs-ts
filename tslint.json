@@ -64,10 +64,10 @@
       {"singleline": "never",
       "multiline": "always"}
     ],
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "no-unreachable": true,
     "no-unused-expression": true,
-    "no-unused-variable": [true, "react"],
+    "no-unused-variable": [false, "react", "React"],
     "no-use-before-declare": false,
     "no-var-keyword": true,
     "no-var-requires": false,
@@ -119,7 +119,9 @@
       "check-type",
       "check-typecast"  //add
     ],
-    "jsx-no-multiline-js": false  //add
+    "jsx-no-multiline-js": false,  //add
+    "jsx-no-lambda": false,
+    "jsx-alignment": false
   },
   "rulesDirectory": [
     /*

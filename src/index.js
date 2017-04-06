@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { AppRegistry } from 'react-native';
 import { WebStyles } from 'carbon-ui';
+import 'babel-polyfill';
 import App from './index.web';
 class AppWithStyles extends React.Component {
     render() {
